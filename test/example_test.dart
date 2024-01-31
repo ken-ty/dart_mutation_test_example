@@ -1,5 +1,5 @@
-import 'package:dart_mutation_test_example/point_service.dart';
-import 'package:dart_mutation_test_example/user.dart';
+import 'package:dart_mutation_test_example/model/user.dart';
+import 'package:dart_mutation_test_example/service/point_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -12,9 +12,15 @@ void main() {
     test('60歳の場合、100円で購入した場合は2ポイント付与される', () {
       expect(PointService.point(100, User(name: "", age: 60)), equals(2));
     });
+    test('61歳の場合、100円で購入した場合は2ポイント付与される', () {
+      expect(PointService.point(100, User(name: "", age: 61)), equals(2));
+    });
 
     test('60歳の場合、10000円で購入した場合は200ポイント付与される', () {
       expect(PointService.point(10000, User(name: "", age: 60)), equals(200));
+    });
+    test('60歳の場合、10050円で購入した場合は200ポイント付与される', () {
+      expect(PointService.point(10050, User(name: "", age: 60)), equals(200));
     });
   });
 }
