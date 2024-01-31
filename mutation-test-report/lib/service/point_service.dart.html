@@ -348,11 +348,11 @@ td.barBg
 
      <tr>
      <td class="ItemLabel" width="10%">Date:</td>
-     <td class="ItemText" width="35%">2024-01-31 20:13:11.623919</td>
+     <td class="ItemText" width="35%">2024-01-31 23:15:03.413123</td>
      <td class="ItemLabel" width="10%">Mutations:</td>
-     <td class="ItemReport" width="15%">10</td>
      <td class="ItemReport" width="15%">11</td>
-     <td class="ItemReportHigh" width="15%">90.9 %</td>
+     <td class="ItemReport" width="15%">11</td>
+     <td class="ItemReportHigh" width="15%">100.0 %</td>
      </tr>
      
      <tr>
@@ -417,9 +417,9 @@ td.barBg
 <table class="mutationTable" width="100%">
 <tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+    <span class="changedTokens"> if (!(point &gt; 200)) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (point &gt;<span class="changedTokens"> -200</span>) {</span></td><td class="match">RegExp: pattern=([\s=\(])([1-9\.]+[0-9]+|0\.0*[1-9]) flags=m<span class="tooltip">Id: builtin.number.negative</span></td></tr></table>
 
-</div></a><a name="18"><button class="collapsible problem"><pre class="fileContents"><span class="lineNumber">      18 </span>      point = 200;</pre></button>
+</div></a><a name="18"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      18 </span>      point = 200;</pre></button>
 <div class="content">
-<b>Undetected mutations:</b>
+<b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
 <tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+       point =<span class="changedTokens"> -200</span>;</span></td><td class="match">RegExp: pattern=([\s=\(])([1-9\.]+[0-9]+|0\.0*[1-9]) flags=m<span class="tooltip">Id: builtin.number.negative</span></td></tr></table>
 
