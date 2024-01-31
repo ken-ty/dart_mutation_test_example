@@ -25,7 +25,7 @@ https://pub.dev/packages/mutation_test
 
 ## mutation test で テストの質を上げる
 
-コマンド: `dart run mutation_test mutating_test_congif.xml`
+コマンド: `dart run mutation_test mutating_test_config.xml`
 
 before:
 
