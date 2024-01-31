@@ -25,6 +25,8 @@ https://pub.dev/packages/mutation_test
 
 ## mutation test で テストの質を上げる
 
+コマンド: `dart run mutation_test`
+
 before:
 
 ```widget_test.dart
@@ -49,6 +51,8 @@ void main() {
   });
 }
 ```
+
+ミューテーション結果を見て、修正。
 
 after:
 ```widget_test.dart
