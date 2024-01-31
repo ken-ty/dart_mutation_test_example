@@ -1,3 +1,5 @@
+import 'package:dart_mutation_test_example/point_service.dart';
+import 'package:dart_mutation_test_example/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -9,7 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final int _counter = 0;
+  int _money = 0;
+  int _point = 0;
+  User _user = User(name: "anonymous", age: 20);
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +42,14 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: 200,
                   child: TextField(
+                      onChanged: (value) {
+                        // money を intにする
+                        final age = int.tryParse(value);
+                        setState(() {
+                          _user = User(name: _user.name, age: age ?? _user.age);
+                          _point = PointService.point(_money, _user);
+                        });
+                      },
                       keyboardType: TextInputType.number,
                       inputFormatters: [
                         FilteringTextInputFormatter.digitsOnly
@@ -52,10 +64,17 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: 200,
                   child: TextField(
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        FilteringTextInputFormatter.digitsOnly
-                      ]),
+                    onChanged: (value) {
+                      // money を intにする
+                      final money = int.tryParse(value);
+                      setState(() {
+                        _money = money ?? _money;
+                        _point = PointService.point(_money, _user);
+                      });
+                    },
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                  ),
                 ),
                 const Text('円')
               ],
@@ -69,7 +88,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '$_counter',
+                  '$_point',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const Text('ポイント'),
