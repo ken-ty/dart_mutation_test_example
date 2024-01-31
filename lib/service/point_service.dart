@@ -1,4 +1,4 @@
-import 'package:dart_mutation_test_example/user.dart';
+import 'package:dart_mutation_test_example/model/user.dart';
 
 class PointService {
   static int point(int money, User user) {

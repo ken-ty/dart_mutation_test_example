@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mutations version="1.0">
+  <!-- License: BSD-3-Clause  -->
+  <files>
+    <file>./lib/service/point_service.dart</file>
+  </files>
+  <exclude>
+    <lines begin="1" end="2" />
+  </exclude>
+  <commands>
+    <command group="test" expected-return="0" working-directory=".">flutter test</command>
+  </commands>
+</mutations>

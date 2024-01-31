@@ -1,5 +1,5 @@
-import 'package:dart_mutation_test_example/point_service.dart';
-import 'package:dart_mutation_test_example/user.dart';
+import 'package:dart_mutation_test_example/model/user.dart';
+import 'package:dart_mutation_test_example/service/point_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
